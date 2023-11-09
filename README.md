@@ -56,7 +56,18 @@ Os alarmes configurados acionam a escalabilidade automática quando necessário,
 
 A arquitetura da aplicação em produção é altamente escalável e disponível, atendendo às necessidades de milhões de usuários. Ela faz uso eficiente dos serviços da AWS, contêineres Docker e bancos de dados gerenciados para garantir um desempenho confiável e eficaz.
 
+# Antes de Tudo
 
+```shell 
+    #Subir o MongoDB
+    docker compose -f mongodb_composer.yml up
+
+    #Subir o MySQL
+    docker compose -f mysql_composer.yml up
+
+    #Subir o RabbitMQ
+    docker compose -f rabbitmq_composer.yml up
+```
 # API Documentation
 
 This is the documentation for the API endpoints of the Parquimetro application.
