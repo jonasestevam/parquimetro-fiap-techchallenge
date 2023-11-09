@@ -55,3 +55,170 @@ Os alarmes configurados acionam a escalabilidade automática quando necessário,
 ## Conclusão
 
 A arquitetura da aplicação em produção é altamente escalável e disponível, atendendo às necessidades de milhões de usuários. Ela faz uso eficiente dos serviços da AWS, contêineres Docker e bancos de dados gerenciados para garantir um desempenho confiável e eficaz.
+
+
+# API Documentation
+
+This is the documentation for the API endpoints of the Parquimetro application.
+
+## Conductors
+
+### Get conductor by ID
+- **URL:** `/api/conductors/{id}`
+- **Method:** GET
+- **Description:** Retrieves a conductor by its ID.
+- **Parameters:**
+  - `id` (Path) - Conductor ID (required, integer)
+- **Responses:**
+  - 200 OK: Returns a `ConductorDTO` object.
+
+### Update conductor
+- **URL:** `/api/conductors/{id}`
+- **Method:** PUT
+- **Description:** Updates a conductor with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Conductor ID (required, integer)
+- **Request Body:**
+  - `ConductorDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the updated `ConductorDTO`.
+
+### Delete conductor
+- **URL:** `/api/conductors/{id}`
+- **Method:** DELETE
+- **Description:** Deletes a conductor with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Conductor ID (required, integer)
+
+## Payment Methods
+
+### Get payment method by ID
+- **URL:** `/api/paymentMethods/{id}`
+- **Method:** GET
+- **Description:** Retrieves a payment method by its ID.
+- **Parameters:**
+  - `id` (Path) - Payment Method ID (required, integer)
+- **Responses:**
+  - 200 OK: Returns a `PaymentMethodDTO` object.
+
+### Update payment method
+- **URL:** `/api/paymentMethods/{id}`
+- **Method:** PUT
+- **Description:** Updates a payment method with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Payment Method ID (required, integer)
+- **Request Body:**
+  - `PaymentMethodDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the updated `PaymentMethodDTO`.
+
+### Delete payment method
+- **URL:** `/api/paymentMethods/{id}`
+- **Method:** DELETE
+- **Description:** Deletes a payment method with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Payment Method ID (required, integer)
+
+## Receipts
+
+### Get receipt by ID
+- **URL:** `/api/receipts/{id}`
+- **Method:** GET
+- **Description:** Retrieves a receipt by its ID.
+- **Parameters:**
+  - `id` (Path) - Receipt ID (required, integer)
+- **Responses:**
+  - 200 OK: Returns a `ReceiptDTO` object.
+
+## Parking Alerts
+
+### Get parking alert by ID
+- **URL:** `/api/parkingAlerts/{id}`
+- **Method:** GET
+- **Description:** Retrieves a parking alert by its ID.
+- **Parameters:**
+  - `id` (Path) - Parking Alert ID (required, integer)
+- **Responses:**
+  - 200 OK: Returns a `ParkingAlertDTO` object.
+
+### Update parking alert
+- **URL:** `/api/parkingAlerts/{id}`
+- **Method:** PUT
+- **Description:** Updates a parking alert with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Parking Alert ID (required, integer)
+- **Request Body:**
+  - `ParkingAlertDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the updated `ParkingAlertDTO`.
+
+### Delete parking alert
+- **URL:** `/api/parkingAlerts/{id}`
+- **Method:** DELETE
+- **Description:** Deletes a parking alert with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Parking Alert ID (required, integer)
+
+## Parking Sessions
+
+### Start a parking session
+- **URL:** `/api/parksessions/start`
+- **Method:** POST
+- **Description:** Starts a new parking session and returns it.
+- **Request Body:**
+  - `ParkingSessionDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the created `ParkingSessionDTO`.
+
+### Get all parking sessions
+- **URL:** `/api/parksessions`
+- **Method:** GET
+- **Description:** Retrieves a list of all parking sessions.
+- **Responses:**
+  - 200 OK: Returns a list of `ParkingSessionDTO` objects.
+
+## Vehicles
+
+### Create a new vehicle
+- **URL:** `/api/vehicles`
+- **Method:** POST
+- **Description:** Creates a new vehicle and returns it.
+- **Request Body:**
+  - `VehicleDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the created `VehicleDTO`.
+
+### Get all vehicles
+- **URL:** `/api/vehicles`
+- **Method:** GET
+- **Description:** Retrieves a list of all vehicles.
+- **Responses:**
+  - 200 OK: Returns a list of `VehicleDTO` objects.
+
+### Get vehicle by ID
+- **URL:** `/api/vehicles/{id}`
+- **Method:** GET
+- **Description:** Retrieves a vehicle by its ID.
+- **Parameters:**
+  - `id` (Path) - Vehicle ID (required, integer)
+- **Responses:**
+  - 200 OK: Returns a `VehicleDTO` object.
+
+### Update vehicle
+- **URL:** `/api/vehicles/{id}`
+- **Method:** PUT
+- **Description:** Updates a vehicle with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Vehicle ID (required, integer)
+- **Request Body:**
+  - `VehicleDTO` (application/json, required)
+- **Responses:**
+  - 200 OK: Returns the updated `VehicleDTO`.
+
+### Delete vehicle
+- **URL:** `/api/vehicles/{id}`
+- **Method:** DELETE
+- **Description:** Deletes a vehicle with the specified ID.
+- **Parameters:**
+  - `id` (Path) - Vehicle ID (required, integer)
+
